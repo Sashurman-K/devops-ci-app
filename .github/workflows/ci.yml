@@ -132,7 +132,7 @@ jobs:
           persist-credentials: false
       - name: Deploy with Ansible
         working-directory: ansible
-        run: ansible-playbook site.yml -e "app_tag=${GITHUB_SHA}"
+        run: run: ansible-playbook site.yml -e "app_tag=does-not-exist"
       - name: Check through Nginx
         run: |
           curl --fail --show-error --silent \
